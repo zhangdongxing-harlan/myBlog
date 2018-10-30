@@ -1,0 +1,55 @@
+.about_content {
+    margin-top: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 0 8px;
+    height: 126px;
+    overflow: hidden;
+}
+
+.message {
+    margin-top: 20px;
+}
+
+.message textarea {
+    width: 876px;
+    height: 126px;
+    padding: 20px;
+    border: 1px solid #333;
+    background: transparent;
+    outline: none;
+    resize: none;
+    font-family:'宋体';
+}
+
+.message textarea:hover {
+    box-shadow: 0 0 8px;
+}
+
+.message button {
+    color: #333;
+    background-color: transparent;
+    border-color: #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    touch-action: manipulation;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 864px;
+    margin-top: 30px;
+    border: 1px solid #333;
+}
+
+.message button:hover {
+    background: rgba(255, 2555, 255, 0.3);
+    border: 1px solid rgb(90, 88, 88);
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>删除留言</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="styleshexet" href="../css/m.css">
+    <link rel="stylesheet" href="../css/message.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src='../js/index.js'></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        {{include 'component/header.html'}}
+        <div class="container">
+            <div class="con_content">
+                <div class="about_box">
+                    <h2 class="nh1"><span>您现在的位置是：<a href="/" target="_blank">网站首页</a>>><a href="#" target="_blank">信息浏览</a></span><b>留言</b></h2>
+                    <div class="f_box">
+                        <p class="a_title">留言</p>
+                        <p class="p_title"></p>
+                        <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>-->
+                        <!-- 可用于内容模板 -->
+                    </div>
+                    {{each items}}
+                    <ul class="about_content">
+                        <p>{{$value.content.substring(0,20)}}</p>
+                         <a href="{{`/delete/${$value._id}`}}">删除留言</a>
+                    </ul>
+                    {{/each}}
+                    
+                    <div class="message">
+                        <form action="/message" method='post'>
+                            <h3>请在下方留言</h3>
+                            <textarea name="content" placeholder="留言"></textarea>
+                            <br>
+                            <button type='submit'>提交</button>
+                        </form>
+                    </div>
+                    <!-- container代码 结束 -->
+                </div>
+            </div>
+            <div class="blank"></div>
+        </div>
+        <!-- container代码 结束 -->
+        {{include './component/footer'}}
+    </div>
+</body>
+
+</html>

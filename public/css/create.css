@@ -1,0 +1,67 @@
+.container {
+    background: rgb(229, 229, 229, 0.6);
+    overflow: hidden;
+    width: 1000px;
+    margin: auto;
+    border-left: #d2d2d2 1px solid;
+    border-right: #d2d2d2 1px solid;
+}
+
+.container form {
+    width: 380px;
+    margin: 0 auto;
+}
+
+.container input, textarea{
+    display: block;
+    width: 380px;
+    height: 38px;
+    border-radius: 4px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.container textarea {
+    height: 300px;
+    resize: none;
+}
+
+.container select {
+    width: 392px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    padding: 5px;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none
+}
+.container button {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    touch-action: manipulation;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 310px;
+}
+
+.container button:hover {
+    background: rgba(255, 2555, 255, 0.3);
+    border: 1px solid rgb(90, 88, 88);
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="个人博客" />
+  <meta name="description" content="个人博客" />
+  <title>学习笔记</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/m.css">
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src='../js/index.js'></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    {{include 'component/header.html'}}
+    <div class="container">
+      <div class="con_content">
+        <div class="about_box">
+          <h2 class="nh1"><span>您现在的位置是：<a href="/" target="_blank">网站首页</a>>><a href="/diary/personalEssay" target="_blank">学习笔记</a></span><b>学习笔记</b></h2>
+          <div class="dtxw box">
+            <ul>
+              {{each items}}
+              <li>
+                <div class="dttext">
+                  <div class="xwpic"><a href="{{`/article/${$value._id}`}}"><img src="../images/article.jpg"></a></div>
+                  <ul>
+                    <h2><a href="{{`/article/${$value._id}`}}">{{$value.title}}</a></h2>
+                    <div>{{$value.description}}</div>
+                    <div class="binfo"><span class="lm"><a href="/">学习笔记</a></span><span class="atime">{{$value.time}}</span></div>
+                  </ul>
+                </div>
+              </li>
+              {{/each}}
+            </ul>
+
+          </div>
+          {{include './component/page.html'}}
+        </div>
+      </div>
+      <div class="blank"></div>
+      <!-- container代码 结束 -->
+    </div>
+    {{include './component/footer'}}
+  </div>
+</body>
+
+</html>

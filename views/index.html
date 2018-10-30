@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>博客</title>
+  <meta name="keywords" content="个人博客" />
+  <meta name="description" content="个人博客" />
+  <link rel="stylesheet" href="css/base.css" >
+  <link rel="stylesheet" href="css/index.css" >
+  <link rel="stylesheet" href="css/m.css" >
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src='js/index.js'></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    {{include 'component/header.html'}}
+    <div class="jztop"></div>
+    <div class="container">
+      <div class="bloglist f_l">
+        <ul>
+          <li>
+            {{each items}}
+            <h3 class="blogtitle">
+              <span><a href="{{'/article/'+$value._id}}" title="css3" target="_blank" class="classname">文章题目</a></span>
+              <a href="{{`/article/${$value._id}`}}" target="_blank">{{$value.title}}</a>
+            </h3>
+            <div class="bloginfo">
+              <span class="blogpic">
+                <a href="{{`/article/${$value._id}`}}" title="{{$value.title}}">
+                  <img src="images/index.jpg" alt="{{$value.title}}}">
+                </a>
+              </span>
+              <div>{{$value.description}}</div>
+            </div>
+            <div class="autor">
+              <span class="lm f_l"></span>
+              <span class="dtime f_l">{{$value.time}}</span>
+              <span class="viewnum f_l"></span>
+              <span class="f_r"><a href="{{`/article/${$value._id}`}}"  class="more">阅读原文&gt;&gt;</a></span>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="r_box f_r">
+        <div class="tit01">
+          <h3 class="tit">关注我</h3>
+          <div class="gzwm">
+            <ul>
+              <li><a class='git'href="https://github.com/Kanzaki-H-Aria" target="_blank">GitHub</a></li>
+              <li><a class="email" href="mailto:1807907274@qq.com" target="_blank">邮箱</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--tit01 end-->
+
+        <div class="tuwen">
+          <h3 class="tit">文章推荐</h3>
+          <ul>
+            {{each items.slice(0,5)}}
+            <li><a href="{{`/article/${$value._id}`}}"><i><img src="images/technology.jpg"></i><b>{{$value.title}}</b></a>
+              <p><span class="tutime">{{$value.time}}</span></p>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="ad"> <img src="images/03.jpg"> </div>
+      </div>
+    </div>
+    <!-- container代码 结束 -->
+    <div class="jzend"></div>
+    <footer>
+      <div class="footer">
+        <div class="f_l">
+          <!-- <p>All Rights Reserved 版权所有：<a href="http://www.yangqq.com">杨青个人博客</a> 备案号：蜀ICP备00000000号</p> -->
+        </div>
+        <div class="f_r textr">
+          <!-- <p>Design by DanceSmile</p> -->
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
