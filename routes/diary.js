@@ -7,7 +7,7 @@ const marked = require('marked');
 let num = 1;
 
 router.get('/',async (ctx,next)=>{
-    ctx.redirect('/diary/PersonalEssay');
+    ctx.redirect('/diary/personalEssay');
 });
 router.get('/personalEssay',async (ctx,next)=>{
     let items = await mongoDB.find('Article',{type:'diary'});
