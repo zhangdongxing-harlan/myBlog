@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "istanbul cover _mocha",
+      "start": "pm2 start main.js --name 'myblog'"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "koa-router": "^7.4.0",
     "koa-session": "^5.9.0",
     "koa-static": "^5.0.0",
+    "marked": "^0.5.1",
     "mongodb": "^3.1.6"
   },
   "devDependencies": {

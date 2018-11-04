@@ -37,6 +37,6 @@ app.use(session(CONFIG, app));
 //路由
 routes(app,router);
 
-app.listen(3000,function(){
+app.listen(8000,function(){
   console.log(`Server is running...`)
 });
